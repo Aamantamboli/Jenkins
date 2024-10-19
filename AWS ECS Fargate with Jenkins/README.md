@@ -37,31 +37,27 @@
 
 ![Screenshot 2024-10-17 104000](https://github.com/user-attachments/assets/8d8507fc-c8c5-41ce-aa15-7ee3d9f339d3)
 
-# Step 10: Go to advanced and in tunnel connection through give give jenkins instance ip and port which you have given in Step 5
-
-![Screenshot 2024-10-17 222357](https://github.com/user-attachments/assets/f21f873a-4d76-42a5-be9f-732a264d31f0)
-
-# Step 11: Give label and template name 
+# Step 10: Give label and template name 
 
 ![Screenshot 2024-10-18 100536](https://github.com/user-attachments/assets/2f791b5b-5fbd-432b-9b43-8e5b26038ed8)
 
-# Step 12: Select launch type Fargate and operating system family LINUX 
+# Step 11: Select launch type Fargate and operating system family LINUX 
 
 ![Screenshot 2024-10-18 090359](https://github.com/user-attachments/assets/808ac193-2616-4f41-876b-e7143db7247a)
 
-# Step 13: Give soft limit and CPU units 
+# Step 12: Give soft limit and CPU units 
 
 ![Screenshot 2024-10-17 104326](https://github.com/user-attachments/assets/229f86ce-d71f-4d12-ab6e-3047a89745ce)
 
-# Step 14: Give subnets and security group of your instance and save it
+# Step 13: Give subnets and security group of your instance and save it
 
 ![Screenshot 2024-10-17 104512](https://github.com/user-attachments/assets/29ec8a53-42d9-48b1-bd6c-c8e577799e89)
 
-# Step 15: Create new item 
+# Step 14: Create new item 
 
 ![Screenshot 2024-10-03 172357](https://github.com/user-attachments/assets/23a667de-9e74-4ca4-af9c-97f6eeea25e1)
 
-# Step 16: Write a pipeline must give your label properly 
+# Step 15: Write a pipeline must give your label properly 
 ```
 pipeline {
  agent {
@@ -77,10 +73,10 @@ pipeline {
   }
 ```
 
-# Step 17: CLick on Build now your pipeline will be successfully build 
+# Step 16: CLick on Build now your pipeline will be successfully build 
 
 ![Screenshot 2024-10-17 230742](https://github.com/user-attachments/assets/007aa0f1-04cc-48d7-bae8-6a6d80b44e50)
 
-# Step 18: Go to ECS and your task will be running 
+# Step 17: Go to ECS and your task will be running 
 
 ![Screenshot 2024-10-17 231543](https://github.com/user-attachments/assets/80f6acf5-98b0-40cd-8b87-c2f9606fb9fe)
