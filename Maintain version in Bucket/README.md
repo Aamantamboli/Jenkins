@@ -1,5 +1,3 @@
-Here's a `README.md` file that outlines the steps for setting up the environment, configuring Jenkins, and deploying the application. You can use this file in your GitHub repository.
-
 # Jenkins CI/CD Pipeline Setup for Student App
 
 This document outlines the steps to create an AWS environment, set up Jenkins, and deploy a Maven-based Java application using a CI/CD pipeline.
