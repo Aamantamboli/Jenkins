@@ -1,7 +1,9 @@
 # Jenkins Installation
 
-![Jenkins Logo](https://github.com/user-attachments/assets/9b4f1359-1b21-4231-aeab-8f2358f32bda)
-
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/c39c6d92-0b6f-41f5-a1c3-a39d120c467d"/>
+</p>
+ 
 ## Introduction
 
 This guide walks you through the process of installing **Jenkins** on a **Linux** system. It includes all necessary steps, from setting up the repository to accessing Jenkins via a web browser. Make sure to follow each step carefully for a successful installation.
@@ -32,13 +34,11 @@ sudo -i
 Run the following commands to add the Jenkins repository, update the package list, and install Jenkins.
 
 ```bash
-sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
-  https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
-
-echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]" \
-  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+curl -fsSL https://pkg.jenkins.io/debian/jenkins.io-2023.key | sudo tee \
+  /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
+  https://pkg.jenkins.io/debian binary/ | sudo tee \
   /etc/apt/sources.list.d/jenkins.list > /dev/null
-
 sudo apt-get update
 sudo apt-get install jenkins
 ```
@@ -49,7 +49,7 @@ Jenkins requires **Java** to run. Install the Java Runtime Environment (JRE) by 
 
 ```bash
 sudo apt update
-sudo apt install fontconfig openjdk-17-jre
+sudo apt install openjdk-17-jre
 ```
 
 ### Step 4: Enable Jenkins Service at Boot
@@ -85,7 +85,7 @@ For example:
 http://<your-server-ip>:8080
 ```
 
-![Jenkins Web Interface](https://github.com/user-attachments/assets/f815ea78-b146-4f97-a8d9-4295c43b2802)
+<img src="https://github.com/user-attachments/assets/9d149b36-25b3-4497-ae29-6896ab219fc4"/>
 
 ### Step 8: Retrieve Initial Admin Password
 
@@ -107,7 +107,7 @@ Once you have entered the initial password, Jenkins will guide you through the s
 
 After completing the setup process, you should see the Jenkins dashboard, confirming that **Jenkins is successfully installed**.
 
-![Jenkins Dashboard](https://github.com/user-attachments/assets/43191163-fd36-472c-92a2-7cb363e28f50)
+<img src="https://github.com/user-attachments/assets/b9083b81-943e-4a30-ab95-6ccdf916ab09"/>
 
 ---
 
