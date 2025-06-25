@@ -29,27 +29,29 @@ To ensure you have the necessary permissions to install Jenkins, switch to the r
 sudo -i
 ```
 
-### Step 2: Add Jenkins Repository and Install Jenkins
-
-Run the following commands to add the Jenkins repository, update the package list, and install Jenkins.
-
-```bash
-curl -fsSL https://pkg.jenkins.io/debian/jenkins.io-2023.key | sudo tee \
-  /usr/share/keyrings/jenkins-keyring.asc > /dev/null
-echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
-  https://pkg.jenkins.io/debian binary/ | sudo tee \
-  /etc/apt/sources.list.d/jenkins.list > /dev/null
-sudo apt-get update
-sudo apt-get install jenkins
-```
-
-### Step 3: Install Java (Required for Jenkins)
+### Step 2: Install Java (Required for Jenkins)
 
 Jenkins requires **Java** to run. Install the Java Runtime Environment (JRE) by running:
 
 ```bash
 sudo apt update
 sudo apt install openjdk-17-jre
+```
+
+### Step 3: Add Jenkins Repository and Install Jenkins
+
+Run the following commands to add the Jenkins repository, update the package list, and install Jenkins.
+
+```bash
+curl -fsSL https://pkg.jenkins.io/debian/jenkins.io-2023.key | sudo tee \
+  /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+
+echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
+  https://pkg.jenkins.io/debian binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+
+sudo apt update
+sudo apt install jenkins -y
 ```
 
 ### Step 4: Enable Jenkins Service at Boot
